@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <map
+    id="myMap"
+    style="width:100%; height:100%;"     
+    longitude="{{longitude}}"   中心经度
+    latitude="{{latitude}}"    中心纬度
+    polygons="{{polygons}}"    控制多边形
+    bindregionchange="regionChange"    视野发生变化时触发
+  > -->
+  <map
+    id="myMap"
+    style="width:100%; height:100%;"
+    longitude="{{longitude}}"
+    latitude="{{latitude}}"
+    polygons="{{polygons}}"
+    bindregionchange="regionChange"
+  >
+    <cover-view class="marker_center" style="left:{{left}}px; top:{{top}}px">
+      <cover-image style="width:36;height:36"  src="../../resource/position_point.png"></cover-image>
+    </cover-view>
+
+    <cover-view class="station">
+      <cover-view style="word-break:break-all;word-wrap:break-word;white-space:pre-line">{{address}}</cover-view>
+    </cover-view>
+  </map>
+  
+</view>
